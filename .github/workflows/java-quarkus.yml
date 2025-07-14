@@ -111,10 +111,5 @@ jobs:
         uses: azure/webapps-deploy@v2 # ¡Este es el action correcto para Azure Web Apps!
         with:
           app-name: ${{ inputs.app-name }}
-          slot-name:
-            "production" # Si usas slots de despliegue, especifica el nombre del slot.
-            # Por defecto, 'production' es el slot principal.
-          package:
-            ./artifacts/*.jar # Apunta al JAR descargado en el directorio 'artifacts'.
-            # '*.jar' es un comodín útil si el nombre del JAR varía.
-            # Si prefieres ser más específico, usa la ruta completa del JAR.
+          slot-name: "production"
+          package: ./artifacts/*.jar
